@@ -7,9 +7,10 @@ public class AreaOfACircle {
     {
         Scanner input=new Scanner(System.in);
 
-        double pi= 3.14159,area,radius;
+       final double PI= 3.14159;
+       double area,radius;
         radius= input.nextDouble();
-        area=pi*(radius*radius);
+        area=PI*(radius*radius);
         System.out.printf("A=%.4f\n",area);
 
     }

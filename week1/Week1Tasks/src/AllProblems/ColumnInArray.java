@@ -7,20 +7,21 @@ public class ColumnInArray {
     {
         Scanner input=new Scanner(System.in);
 
-        int columnNumber,row=12,column=12;
+        final int ROW=12,COLUMN=12;
+        int columnNumber;
         char operation;
         float average,sum=0;
-        float array[][]=new float[row][column];
+        float array[][]=new float[ROW][COLUMN];
 
         columnNumber= input.nextInt();
         operation=input.next().charAt(0);
-        for (int i = 0; i <row; i++) {
-            for (int j = 0; j < column; j++) {
+        for (int i = 0; i <ROW; i++) {
+            for (int j = 0; j < COLUMN; j++) {
 
                 array[i][j]=input.nextFloat();
             }
         }
-        for (int i = 0; i<column; i++) {
+        for (int i = 0; i<COLUMN; i++) {
             sum += array[i][columnNumber];
         }
 
@@ -28,7 +29,7 @@ public class ColumnInArray {
             System.out.printf("%.1f\n",sum);
         else {
 
-            average = sum / column;
+            average = sum / COLUMN;
             System.out.printf("%.1f\n",average);
         }
 
